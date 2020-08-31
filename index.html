@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Malaysia Flag</title>
+</head>
+<body>
+
+	<style type="text/css">
+		:root {
+			--red: #cc0001;
+			--white: #fff;
+			--blue: #010066;
+			--black: #000;
+			--yellow: #ffcc00;
+		}
+
+		.flag {
+			display: grid;
+			grid-template-rows: 8fr 6fr;
+			grid-template-columns: 50% 50%;
+			background: var(--white);
+			border: 2px solid var(--black);
+			width: 600px;
+			height: 300px;
+		}
+
+		.top-left {
+			display: flex;
+			background-color: var(--blue);
+			justify-content: center;
+			align-items: center;
+		}
+
+		.top-right {
+			background: repeating-linear-gradient(
+				0deg,
+				var(--red),
+				var(--white) 0 12.5%,
+				var(--red) 12.5% 25%
+			);
+		}
+
+		.bottom {
+			grid-column: span 2;
+			background: repeating-linear-gradient(
+				0deg,
+				var(--red),
+				var(--white) 0 16.7%,
+				var(--red) 16.7% 33.3%
+			);
+		}
+		.cresent {
+			width: 120px;
+			height: 120px;
+			margin-right: -8px;
+			border-radius: 50%;
+			box-shadow: inset 14px 0px 0 7px var(--yellow);
+		}
+		.stars {
+			position: relative;
+			margin-right: 50px;
+		}
+		.star {
+			position: relative;
+			height: 0;
+			width: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 50px solid var(--yellow);
+			margin-top: -50px;
+		}
+		.star:before {
+			position: absolute;
+			content: "";
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 50px solid var(--yellow);
+			margin-left: -8px;
+			margin-top: 50px;
+		}
+		.star-container {
+			position: absolute;
+		}
+		.star-container:nth-child(2) {
+			transform: rotate(calc(180deg / 7));
+		}
+		.star-container:nth-child(3) {
+			transform: rotate(calc(180deg / 7 * 2));
+		}
+		.star-container:nth-child(4) {
+			transform: rotate(calc(180deg / 7 * 3));
+		}
+		.star-container:nth-child(5) {
+			transform: rotate(calc(180deg / 7 * 4));
+		}
+		.star-container:nth-child(6) {
+			transform: rotate(calc(180deg / 7 * 5));
+		}
+		.star-container:nth-child(7) {
+			transform: rotate(calc(180deg / 7 * 6));
+		}
+	</style>
+	
+	<div class="flag">
+		<div class="top-left">
+			<div class="cresent"></div>
+			<div class="stars">
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+				<div class="star-container">
+					<div class="star"></div>
+				</div>
+			</div>
+		</div>
+		<div class="top-right"></div>
+		<div class="bottom"></div>
+	</div>
+</body>
+</html>
